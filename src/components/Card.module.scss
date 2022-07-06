@@ -1,0 +1,87 @@
+@use '../assets/sass/variables';
+
+.card {
+  position: relative;
+  width: 37rem;
+  background-color: #fff;
+  padding: 5rem 4.8rem 3.5rem 4.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: transform 250ms;
+    transform-origin: left;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: variables.$color-green-2;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &:hover &__read-more {
+    opacity: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__title {
+    position: relative;
+    font-family: variables.$font-heading;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 1.3px;
+    color: variables.$color-dark-2;
+    text-transform: uppercase;
+  }
+
+  &__title::after {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 0;
+    height: 2px;
+    width: 4.2rem;
+    background-color: variables.$color-dark-2;
+  }
+
+  &__description {
+    font-family: variables.$font-text;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2.1;
+    letter-spacing: 1.01px;
+    color: variables.$color-dark-6;
+  }
+
+  &__read-more {
+    font-family: variables.$font-heading;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    color: variables.$color-dark-2;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .5;
+  }
+}

@@ -1,0 +1,64 @@
+@use '../assets/sass/variables';
+
+.works {
+  padding: 13rem 10vw;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.7rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  &__heading {
+    position: relative;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 1.5;
+    letter-spacing: 3.1px;
+    color: variables.$color-dark-2;
+    margin-bottom: 6rem;
+  }
+
+  &__heading::after {
+    content: '';
+    height: 2px;
+    width: 4.5rem;
+    background-color: variables.$color-dark-2;
+    border-radius: 100px;
+    position: absolute;
+    top: 120%;
+    left: 0;
+  }
+
+  &__types {
+    list-style: none;
+    display: flex;
+    gap: 4.1rem;
+    margin-bottom: 16rem;
+  }
+
+  &__type {
+    font-family: variables.$font-text;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.83px;
+    text-transform: uppercase;
+    color: variables.$color-dark-2;
+    opacity: .3;
+
+    &:first-child,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+  }
+}

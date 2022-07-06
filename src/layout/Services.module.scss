@@ -1,0 +1,36 @@
+@use '../assets/sass/variables';
+
+.services {
+  background-color: variables.$color-light-2;
+  padding: 13rem 10vw;
+  width: 100%;
+  margin: 0 auto;
+
+  &__heading {
+    position: relative;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 1.5;
+    letter-spacing: 3.1px;
+    color: variables.$color-dark-2;
+  }
+
+  &__heading::after {
+    content: '';
+    height: 2px;
+    width: 4.5rem;
+    background-color: variables.$color-dark-2;
+    border-radius: 100px;
+    position: absolute;
+    top: 90%;
+    left: 0;
+  }
+
+  &__cards {
+    margin-top: 9rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.8rem;
+  }
+}

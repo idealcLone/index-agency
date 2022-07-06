@@ -1,0 +1,42 @@
+@use '../assets/sass/variables';
+
+.nav {
+  padding-top: 8rem;
+  padding-right: 15%;
+  display: flex;
+  justify-content: flex-end;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 5.8rem;
+  }
+
+  &__item {}
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: variables.$font-heading;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #fff;
+    letter-spacing: 1.94px;
+  }
+
+  &__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    height: 2px;
+    width: 30%;
+    background-color: variables.$color-green-2;
+    transition: all .2s;
+  }
+
+  &__link:hover::after {
+    width: 110%;
+  }
+}
