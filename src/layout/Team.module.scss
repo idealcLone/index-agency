@@ -1,9 +1,8 @@
 @use '../assets/sass/variables';
 
-.services {
-  background-color: variables.$color-light-2;
+.team {
   padding: 13rem 5vw;
-  width: 100%;
+  background-color: variables.$color-light-2;
   margin: 0 auto;
 
   &__heading {
@@ -18,19 +17,17 @@
 
   &__heading::after {
     content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5%;
     height: 2px;
     width: 4.5rem;
     background-color: variables.$color-dark-2;
-    border-radius: 100px;
-    position: absolute;
-    top: 90%;
-    left: 0;
   }
 
-  &__cards {
-    margin-top: 9rem;
+  &__members {
+    margin-top: 6.5rem;
     display: flex;
-    justify-content: space-between;
-    gap: 2.8rem;
+    gap: 3.7rem;
   }
 }

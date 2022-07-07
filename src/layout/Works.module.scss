@@ -1,15 +1,7 @@
 @use '../assets/sass/variables';
 
 .works {
-  padding: 13rem 10vw;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  gap: 1.7rem;
-
-  & > * {
-    flex: 1;
-  }
+  padding: 16.4rem 5vw;
 
   &__heading {
     position: relative;
@@ -19,36 +11,35 @@
     line-height: 1.5;
     letter-spacing: 3.1px;
     color: variables.$color-dark-2;
-    margin-bottom: 6rem;
   }
 
   &__heading::after {
     content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5%;
     height: 2px;
     width: 4.5rem;
     background-color: variables.$color-dark-2;
-    border-radius: 100px;
-    position: absolute;
-    top: 120%;
-    left: 0;
   }
 
   &__types {
+    margin-top: 5rem;
     list-style: none;
     display: flex;
     gap: 4.1rem;
-    margin-bottom: 16rem;
   }
 
   &__type {
     font-family: variables.$font-text;
-    font-size: 1.3rem;
+    text-transform: uppercase;
     font-weight: 500;
+    font-size: 1.3rem;
     line-height: 1.2;
     letter-spacing: 0.83px;
-    text-transform: uppercase;
     color: variables.$color-dark-2;
     opacity: .3;
+    cursor: pointer;
 
     &:first-child,
     &:hover {
@@ -56,9 +47,25 @@
     }
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 14rem;
+  &__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+  }
+
+  &__more {
+    font-family: variables.$font-text;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: variables.$color-dark-2;
+    margin-top: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: right;
   }
 }

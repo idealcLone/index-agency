@@ -1,0 +1,49 @@
+@use '../assets/sass/variables';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &__upper {
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-dark-3;
+    font-family: variables.$font-heading;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    letter-spacing: 0.83px;
+    color: #ffffff50;
+  }
+
+  &__address {
+    margin-bottom: 1rem;
+  }
+
+  &__social {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &__lower {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-dark-2;
+    font-family: variables.$font-heading;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    letter-spacing: 0.83px;
+    color: #ffffff50;
+  }
+}

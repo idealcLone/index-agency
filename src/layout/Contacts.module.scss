@@ -1,0 +1,46 @@
+@use '../assets/sass/variables';
+
+.contacts {
+  display: flex;
+  height: 30rem;
+
+  & > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__subheading {
+    font-family: variables.$font-heading;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    letter-spacing: 2.67px;
+    color: variables.$color-dark-7;
+  }
+
+  &__paragraph {
+    font-family: variables.$font-text;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    letter-spacing: 1.56px;
+    color: variables.$color-dark-7;
+    opacity: .8;
+  }
+
+  &__careers {
+    background-color: variables.$color-light-2;
+  }
+
+  &__info {
+    background-color: variables.$color-green-1;
+
+    div, p {
+      color: #fff;
+    }
+  }
+}
