@@ -4,7 +4,7 @@ import { About } from './layout/About';
 import { Services } from './layout/Services';
 import { Works } from './layout/Works';
 import { Team } from './layout/Team';
-import { Testimonial } from './layout/Testimonial';
+import { Testimonials } from './layout/Testimonials';
 import { Contacts } from './layout/Contacts';
 import { Footer } from './layout/Footer';
 
@@ -16,7 +16,7 @@ export const App: React.FC = () => {
       <Services />
       <Works />
       <Team />
-      <Testimonial />
+      <Testimonials />
       <Contacts />
       <Footer />
     </>

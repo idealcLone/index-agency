@@ -1,7 +1,11 @@
 @use '../assets/sass/variables';
 
 .testimonial {
-  padding: 11.7rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   text-align: center;
   display: flex;
   justify-content: center;
@@ -10,7 +14,7 @@
   gap: 3rem;
 
   &__text {
-    width: 75rem;
+    width: 100%;
     font-family: variables.$font-text;
     font-size: 1.4rem;
     line-height: 2.2;

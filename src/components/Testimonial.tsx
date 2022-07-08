@@ -1,10 +1,10 @@
 import React from 'react';
-
 import classes from './Testimonial.module.scss';
+import classNames from 'classnames';
 
 export const Testimonial: React.FC = () => {
   return (
-    <section className={classes['testimonial']}>
+    <li className={classNames('testimonial', classes['testimonial'])}>
       <p className={classes['testimonial__text']}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -41,6 +41,6 @@ export const Testimonial: React.FC = () => {
           className={classes['testimonial__star']}
         />
       </div>
-    </section>
+    </li>
   );
 };
