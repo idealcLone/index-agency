@@ -3,13 +3,33 @@
 .member {
   position: relative;
   text-align: center;
+  overflow: hidden;
 
   &__photo {
     width: 100%;
   }
 
-  &__name {
+  &:hover &__info {
+    bottom: 0;
+    background-color: rgba(#fff, .9);
+  }
+
+  &:hover .divider {
+    opacity: 1;
+  }
+
+  &__info {
     position: absolute;
+    bottom: -6.7rem;
+    left: 0;
+    right: 0;
+    padding: 1.4rem 0;
+    background-color: rgba(#fff, .5);
+    text-align: center;
+    transition: all 250ms;
+  }
+
+  &__name {
     font-family: variables.$font-heading;
     font-weight: 300;
     font-size: 1.8rem;
@@ -17,12 +37,33 @@
     letter-spacing: 1.15px;
     color: variables.$color-dark-2;
     text-transform: uppercase;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    //left: 50%;
-    //transform: translateX(-50%);
-    padding: 1.4rem 0;
-    background-color: #FFFFFF50;
   }
+
+  &__role {
+    font-family: variables.$font-heading;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 1.15px;
+    color: variables.$color-dark-2;
+    text-transform: uppercase;
+  }
+
+  &__quote {
+    font-family: variables.$font-text;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.01px;
+    color: variables.$color-dark-6;
+  }
+}
+
+.divider {
+  opacity: 0;
+  margin: .9rem auto .6rem;
+  height: 2px;
+  width: 4.5rem;
+  background-color: variables.$color-dark-2;
+  border-radius: 50px;
 }

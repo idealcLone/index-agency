@@ -11,6 +11,7 @@
     line-height: 1.5;
     letter-spacing: 3.1px;
     color: variables.$color-dark-2;
+    margin-bottom: -13rem;
   }
 
   &__heading::after {
@@ -27,7 +28,7 @@
     margin-top: 5rem;
     list-style: none;
     display: flex;
-    gap: 4.1rem;
+    justify-content: space-between;
   }
 
   &__type {
@@ -51,9 +52,26 @@
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+  }
+
+  &__left {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &__right {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-items: flex-end;
   }
 
   &__more {
